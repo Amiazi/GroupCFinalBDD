@@ -1,0 +1,94 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-01T20:04:29.209Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5734490600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.openBrowser()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Searching a product in the search bar.",
+        "description": "",
+        "id": "this-is-a-script-for-home-depot-automated-test-cases.;searching-a-product-in-the-search-bar.",
+        "after": [
+          {
+            "result": {
+              "duration": 440037100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 50269900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on Home Depot homepage",
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_am_on_Home_Depot_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1305548800,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I type a product in the search bar",
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_type_a_product_in_the_search_bar()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3142800400,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I click on the search icon",
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_click_on_the_search_icon()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 88112100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I get the search results",
+            "match": {
+              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_get_the_search_results()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "This is a script for Home Depot automated test cases.",
+    "description": "",
+    "id": "this-is-a-script-for-home-depot-automated-test-cases.",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/HomeDepotFeature/HomeDepot.feature",
+    "tags": []
+  }
+]
