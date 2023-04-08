@@ -11,8 +11,8 @@ import java.util.List;
 public class AmericanHomepage extends WebAPI {
     //driver.findElement(By.xpath)
 
-@FindBy(partialLinkText = "We're hiring! Join o")
-public WebElement careerLink;
+    @FindBy(partialLinkText = "We're hiring! Join o")
+    public WebElement careerLink;
     public AmericanHomepage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
