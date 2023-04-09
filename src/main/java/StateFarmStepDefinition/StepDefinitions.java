@@ -1,9 +1,6 @@
 package StateFarmStepDefinition;
 
-import StateFarmPageObjects.ContactUsPage;
-import StateFarmPageObjects.CustomerCarePage;
-import StateFarmPageObjects.SearchResultsPage;
-import StateFarmPageObjects.StateFarmHomepage;
+import StateFarmPageObjects.*;
 import common.WebAPI;
 import io.cucumber.java.After;
 import io.cucumber.java.en.And;
@@ -17,6 +14,8 @@ public class StepDefinitions extends WebAPI {
     private ContactUsPage contactUsPage;
     private CustomerCarePage customerCarePage;
     private SearchResultsPage searchResultsPage;
+    private CalculatorsPage calculatorsPage;
+
     public StepDefinitions() {
         setUp();
         homepage = new StateFarmHomepage(getDriver());
@@ -101,5 +100,21 @@ public class StepDefinitions extends WebAPI {
     public void thereICanVerifyThatMoreThanOneSearchResultForTheKeywordIsShown() {
         boolean isSearchResultDisplayed = searchResultsPage.isSearchResultsDisplayed();
         Assert.assertTrue(isSearchResultDisplayed);
+    }
+
+    @When("I scroll to the discover more articles sections")
+    public void iScrollToTheDiscoverMoreArticlesSections() {
+        homepage.scrollToCarouselView();
+    }
+
+    @And("clicks the next button until the calculator card is being displayed and clicks the card")
+    public void clicksTheNextButtonUntilTheCalculatorCardIsBeingDisplayedAndClicksTheCard() {
+        calculatorsPage = homepage.clickCalculatorCarouselCard();
+    }
+
+    @Then("I should be taken to the calculator page whose url should be as {string}")
+    public void iShouldBeTakenToTheCalculatorPageWhoseUrlShouldBeAs(String expectedPageUrl) {
+        String currentUrl = calculatorsPage.getPageUrl();
+        Assert.assertTrue(currentUrl.equalsIgnoreCase(expectedPageUrl));
     }
 }

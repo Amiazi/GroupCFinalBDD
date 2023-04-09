@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T13:17:59.353Z",
+        "start_timestamp": "2023-04-09T13:31:24.729Z",
         "line": 14,
         "name": "user can see the consumer and business tel number",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 95598000,
+              "duration": 98628000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 25890237000,
+              "duration": 34094033000,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 45884000,
+              "duration": 47092000,
               "status": "passed"
             },
             "line": 5,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 2159956000,
+              "duration": 3300122000,
               "status": "passed"
             },
             "line": 6,
@@ -60,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 5407000,
+              "duration": 3417000,
               "status": "passed"
             },
             "line": 7,
@@ -72,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 34411000,
+              "duration": 29017000,
               "status": "passed"
             },
             "line": 8,
@@ -90,7 +90,7 @@
           },
           {
             "result": {
-              "duration": 16943000,
+              "duration": 19733000,
               "status": "passed"
             },
             "line": 9,
@@ -120,7 +120,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T13:18:27.637Z",
+        "start_timestamp": "2023-04-09T13:32:02.362Z",
         "line": 3,
         "name": "Clicking help button would take to the customer care page",
         "description": "",
@@ -128,7 +128,7 @@
         "after": [
           {
             "result": {
-              "duration": 98363000,
+              "duration": 110217000,
               "status": "passed"
             },
             "match": {
@@ -141,7 +141,7 @@
         "steps": [
           {
             "result": {
-              "duration": 19154430000,
+              "duration": 25397363000,
               "status": "passed"
             },
             "line": 4,
@@ -153,7 +153,7 @@
           },
           {
             "result": {
-              "duration": 5091321000,
+              "duration": 5082998000,
               "status": "passed"
             },
             "line": 5,
@@ -165,7 +165,7 @@
           },
           {
             "result": {
-              "duration": 3301000,
+              "duration": 5812000,
               "status": "passed"
             },
             "line": 6,
@@ -189,7 +189,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T13:18:51.991Z",
+        "start_timestamp": "2023-04-09T13:32:32.967Z",
         "line": 10,
         "name": "",
         "description": "",
@@ -197,7 +197,7 @@
         "after": [
           {
             "result": {
-              "duration": 99088000,
+              "duration": 89800000,
               "status": "passed"
             },
             "match": {
@@ -210,7 +210,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21858737000,
+              "duration": 22141300000,
               "status": "passed"
             },
             "line": 4,
@@ -222,7 +222,7 @@
           },
           {
             "result": {
-              "duration": 5058403000,
+              "duration": 6346666000,
               "status": "passed"
             },
             "line": 5,
@@ -234,7 +234,7 @@
           },
           {
             "result": {
-              "duration": 31853000,
+              "duration": 21821000,
               "status": "passed"
             },
             "line": 6,
@@ -264,7 +264,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T13:19:19.046Z",
+        "start_timestamp": "2023-04-09T13:33:01.575Z",
         "line": 12,
         "name": "When user searches \"Auto insurance\" keyword, they should see more than one search result",
         "description": "",
@@ -272,7 +272,7 @@
         "after": [
           {
             "result": {
-              "duration": 99152000,
+              "duration": 96911000,
               "status": "passed"
             },
             "match": {
@@ -285,7 +285,7 @@
         "steps": [
           {
             "result": {
-              "duration": 24357349000,
+              "duration": 22113088000,
               "status": "passed"
             },
             "line": 4,
@@ -297,7 +297,7 @@
           },
           {
             "result": {
-              "duration": 46127000,
+              "duration": 33268000,
               "status": "passed"
             },
             "line": 5,
@@ -309,7 +309,7 @@
           },
           {
             "result": {
-              "duration": 1792849000,
+              "duration": 2242584000,
               "status": "passed"
             },
             "line": 6,
@@ -327,7 +327,7 @@
           },
           {
             "result": {
-              "duration": 8398000,
+              "duration": 5015000,
               "status": "passed"
             },
             "line": 7,
@@ -339,7 +339,7 @@
           },
           {
             "result": {
-              "duration": 3293231000,
+              "duration": 1337242000,
               "status": "passed"
             },
             "line": 8,
@@ -357,6 +357,93 @@
     "id": "user-can-search-anything-on-the-site",
     "keyword": "Feature",
     "uri": "file:src/main/java/StateFarmFeature/Searching.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-09T13:33:27.413Z",
+        "line": 12,
+        "name": "User clicks next button on the homepage Discover more articles carousel and after seeing the calculator card",
+        "description": "    they clicks it. This will take them to a new tab containing the calculator page",
+        "id": "homepage-discover-more-articles-carousel-has-calculator-card.-when-users-clicks-on-the-card--they-should-be-taken-to-the-calculator-page;user-clicks-next-button-on-the-homepage-discover-more-articles-carousel-and-after-seeing-the-calculator-card;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 112561000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 20190040000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I am on StateFarm homepage",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13348000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I scroll to the discover more articles sections",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iScrollToTheDiscoverMoreArticlesSections()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 28709062000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "clicks the next button until the calculator card is being displayed and clicks the card",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.clicksTheNextButtonUntilTheCalculatorCardIsBeingDisplayedAndClicksTheCard()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8427000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should be taken to the calculator page whose url should be as \"https://www.statefarm.com/simple-insights/calculators\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"https://www.statefarm.com/simple-insights/calculators\"",
+                  "offset": 64
+                }
+              ],
+              "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheCalculatorPageWhoseUrlShouldBeAs(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Homepage Discover more articles carousel has calculator card. When users clicks on the card, they should be taken to the calculator page",
+    "description": "",
+    "id": "homepage-discover-more-articles-carousel-has-calculator-card.-when-users-clicks-on-the-card--they-should-be-taken-to-the-calculator-page",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/StateFarmFeature/StateFarmCalculator.feature",
     "tags": []
   }
 ]

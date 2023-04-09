@@ -348,4 +348,96 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.uri("file:src/main/java/StateFarmFeature/StateFarmCalculator.feature");
+formatter.feature({
+  "name": "Homepage Discover more articles carousel has calculator card. When users clicks on the card, they should be taken to the calculator page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "User clicks next button on the homepage Discover more articles carousel and after seeing the calculator card",
+  "description": "    they clicks it. This will take them to a new tab containing the calculator page",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I scroll to the discover more articles sections",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "clicks the next button until the calculator card is being displayed and clicks the card",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I should be taken to the calculator page whose url should be as \"\u003ccalculator page url\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "calculator page url"
+      ]
+    },
+    {
+      "cells": [
+        "https://www.statefarm.com/simple-insights/calculators"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "User clicks next button on the homepage Discover more articles carousel and after seeing the calculator card",
+  "description": "    they clicks it. This will take them to a new tab containing the calculator page",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I scroll to the discover more articles sections",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iScrollToTheDiscoverMoreArticlesSections()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks the next button until the calculator card is being displayed and clicks the card",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.clicksTheNextButtonUntilTheCalculatorCardIsBeingDisplayedAndClicksTheCard()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should be taken to the calculator page whose url should be as \"https://www.statefarm.com/simple-insights/calculators\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheCalculatorPageWhoseUrlShouldBeAs(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });
