@@ -117,6 +117,9 @@ public class StateFarmHomepage extends WebAPI {
     public void clickEspanonLink() {
         linkEspa.click();
     }
+    public String getHeadingOfThePage() {
+        return pCreateAffordablePriceJust.getText();
+    }
     public void checkIfLanguageChangedToSpanish(String expectedHeading) {
         String displayedHeading = pCreateAffordablePriceJust.getText();
         Assert.assertTrue(displayedHeading.equalsIgnoreCase(expectedHeading));

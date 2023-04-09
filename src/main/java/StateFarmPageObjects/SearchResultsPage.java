@@ -23,6 +23,10 @@ public class SearchResultsPage {
         PageFactory.initElements(driver, this);
     }
 
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
+    }
+
     public boolean isSearchResultsDisplayed() {
         // Check if the search results are displayed by looking for the search results count
         return divSearchResult.isDisplayed();

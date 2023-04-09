@@ -2,6 +2,7 @@ package StateFarmStepDefinition;
 
 import StateFarmPageObjects.ContactUsPage;
 import StateFarmPageObjects.CustomerCarePage;
+import StateFarmPageObjects.SearchResultsPage;
 import StateFarmPageObjects.StateFarmHomepage;
 import common.WebAPI;
 import io.cucumber.java.After;
@@ -15,6 +16,7 @@ public class StepDefinitions extends WebAPI {
     private final StateFarmHomepage homepage;
     private ContactUsPage contactUsPage;
     private CustomerCarePage customerCarePage;
+    private SearchResultsPage searchResultsPage;
     public StepDefinitions() {
         setUp();
         homepage = new StateFarmHomepage(getDriver());
@@ -66,5 +68,38 @@ public class StepDefinitions extends WebAPI {
     public void iShouldBeTakenToTheCustomerCarePage() {
         String currentUrl = customerCarePage.getCurrentUrl();
         Assert.assertTrue(currentUrl.equalsIgnoreCase("https://www.statefarm.com/customer-care"));
+    }
+
+    @When("I click on the epsanol button")
+    public void iClickOnTheEpsanolButton() {
+        homepage.clickEspanonLink();
+    }
+
+    @Then("I should see the website language changed to spanish by checking the {string}")
+    public void iShouldSeeTheWebsiteLanguageChangedToSpanishByCheckingThe(String expectedHeading) {
+        String displayedHeading = homepage.getHeadingOfThePage();
+        Assert.assertTrue(displayedHeading.equalsIgnoreCase(expectedHeading));
+    }
+
+    @When("I click on the search link")
+    public void iClickOnTheSearchLink() {
+        homepage.clickSearchButton();
+    }
+
+    @And("I enter {string} to search and click the search button")
+    public void iEnterToSearchAndClickTheSearchButton(String searchContent) {
+        searchResultsPage = homepage.search(searchContent);
+    }
+
+    @Then("I should be taken to the search result page")
+    public void iShouldBeTakenToTheSearchResultPage() {
+        String currentUrl = searchResultsPage.getCurrentUrl();
+        Assert.assertTrue(currentUrl.startsWith("https://www.statefarm.com/sfsearch"));
+    }
+
+    @And("There I can verify that more than one search result for the keyword is shown")
+    public void thereICanVerifyThatMoreThanOneSearchResultForTheKeywordIsShown() {
+        boolean isSearchResultDisplayed = searchResultsPage.isSearchResultsDisplayed();
+        Assert.assertTrue(isSearchResultDisplayed);
     }
 }

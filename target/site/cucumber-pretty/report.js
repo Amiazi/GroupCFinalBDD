@@ -164,4 +164,188 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.uri("file:src/main/java/StateFarmFeature/Multilingualism.feature");
+formatter.feature({
+  "name": "Support for spanish language on the website",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I click on the epsanol button",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "I should see the website language changed to spanish by checking the \"\u003cexpected Heading\u003e\"",
+  "keyword": "Then "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "expected Heading"
+      ]
+    },
+    {
+      "cells": [
+        "Crea un precio económico, solo para ti."
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the epsanol button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheEpsanolButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should see the website language changed to spanish by checking the \"Crea un precio económico, solo para ti.\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iShouldSeeTheWebsiteLanguageChangedToSpanishByCheckingThe(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/main/java/StateFarmFeature/Searching.feature");
+formatter.feature({
+  "name": "User can search anything on the site",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "name": "When user searches \"Auto insurance\" keyword, they should see more than one search result",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.step({
+  "name": "I click on the search link",
+  "keyword": "When "
+});
+formatter.step({
+  "name": "I enter \"\u003csearch keyword\u003e\" to search and click the search button",
+  "keyword": "And "
+});
+formatter.step({
+  "name": "I should be taken to the search result page",
+  "keyword": "Then "
+});
+formatter.step({
+  "name": "There I can verify that more than one search result for the keyword is shown",
+  "keyword": "And "
+});
+formatter.examples({
+  "name": "",
+  "description": "",
+  "keyword": "Examples",
+  "rows": [
+    {
+      "cells": [
+        "search keyword"
+      ]
+    },
+    {
+      "cells": [
+        "Auto insurance"
+      ]
+    }
+  ]
+});
+formatter.scenario({
+  "name": "When user searches \"Auto insurance\" keyword, they should see more than one search result",
+  "description": "",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the search link",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheSearchLink()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I enter \"Auto insurance\" to search and click the search button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iEnterToSearchAndClickTheSearchButton(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should be taken to the search result page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheSearchResultPage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "There I can verify that more than one search result for the keyword is shown",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.thereICanVerifyThatMoreThanOneSearchResultForTheKeywordIsShown()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });

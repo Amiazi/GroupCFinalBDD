@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T12:48:36.845Z",
+        "start_timestamp": "2023-04-09T13:17:59.353Z",
         "line": 14,
         "name": "user can see the consumer and business tel number",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 95431000,
+              "duration": 95598000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 16740970000,
+              "duration": 25890237000,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 49660000,
+              "duration": 45884000,
               "status": "passed"
             },
             "line": 5,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 3558016000,
+              "duration": 2159956000,
               "status": "passed"
             },
             "line": 6,
@@ -60,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 4394000,
+              "duration": 5407000,
               "status": "passed"
             },
             "line": 7,
@@ -72,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 40773000,
+              "duration": 34411000,
               "status": "passed"
             },
             "line": 8,
@@ -90,7 +90,7 @@
           },
           {
             "result": {
-              "duration": 18103000,
+              "duration": 16943000,
               "status": "passed"
             },
             "line": 9,
@@ -120,7 +120,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T12:48:57.388Z",
+        "start_timestamp": "2023-04-09T13:18:27.637Z",
         "line": 3,
         "name": "Clicking help button would take to the customer care page",
         "description": "",
@@ -128,7 +128,7 @@
         "after": [
           {
             "result": {
-              "duration": 97795000,
+              "duration": 98363000,
               "status": "passed"
             },
             "match": {
@@ -141,7 +141,7 @@
         "steps": [
           {
             "result": {
-              "duration": 13223409000,
+              "duration": 19154430000,
               "status": "passed"
             },
             "line": 4,
@@ -153,7 +153,7 @@
           },
           {
             "result": {
-              "duration": 5075632000,
+              "duration": 5091321000,
               "status": "passed"
             },
             "line": 5,
@@ -165,7 +165,7 @@
           },
           {
             "result": {
-              "duration": 5803000,
+              "duration": 3301000,
               "status": "passed"
             },
             "line": 6,
@@ -183,6 +183,180 @@
     "id": "help-button-redirects-to-customer-care-page",
     "keyword": "Feature",
     "uri": "file:src/main/java/StateFarmFeature/Help.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-09T13:18:51.991Z",
+        "line": 10,
+        "name": "",
+        "description": "",
+        "id": "support-for-spanish-language-on-the-website;;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 99088000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 21858737000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on StateFarm homepage",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5058403000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on the epsanol button",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheEpsanolButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31853000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should see the website language changed to spanish by checking the \"Crea un precio económico, solo para ti.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Crea un precio económico, solo para ti.\"",
+                  "offset": 69
+                }
+              ],
+              "location": "StateFarmStepDefinition.StepDefinitions.iShouldSeeTheWebsiteLanguageChangedToSpanishByCheckingThe(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Support for spanish language on the website",
+    "description": "",
+    "id": "support-for-spanish-language-on-the-website",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/StateFarmFeature/Multilingualism.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-09T13:19:19.046Z",
+        "line": 12,
+        "name": "When user searches \"Auto insurance\" keyword, they should see more than one search result",
+        "description": "",
+        "id": "user-can-search-anything-on-the-site;when-user-searches-\"auto-insurance\"-keyword--they-should-see-more-than-one-search-result;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 99152000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 24357349000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on StateFarm homepage",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 46127000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on the search link",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheSearchLink()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1792849000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter \"Auto insurance\" to search and click the search button",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Auto insurance\"",
+                  "offset": 8
+                }
+              ],
+              "location": "StateFarmStepDefinition.StepDefinitions.iEnterToSearchAndClickTheSearchButton(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 8398000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I should be taken to the search result page",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheSearchResultPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3293231000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "There I can verify that more than one search result for the keyword is shown",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.thereICanVerifyThatMoreThanOneSearchResultForTheKeywordIsShown()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "User can search anything on the site",
+    "description": "",
+    "id": "user-can-search-anything-on-the-site",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/StateFarmFeature/Searching.feature",
     "tags": []
   }
 ]
