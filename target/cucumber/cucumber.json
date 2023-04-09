@@ -3,7 +3,7 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-09T12:16:22.371Z",
+        "start_timestamp": "2023-04-09T12:48:36.845Z",
         "line": 14,
         "name": "user can see the consumer and business tel number",
         "description": "",
@@ -11,7 +11,7 @@
         "after": [
           {
             "result": {
-              "duration": 97644000,
+              "duration": 95431000,
               "status": "passed"
             },
             "match": {
@@ -24,7 +24,7 @@
         "steps": [
           {
             "result": {
-              "duration": 26899962000,
+              "duration": 16740970000,
               "status": "passed"
             },
             "line": 4,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 55637000,
+              "duration": 49660000,
               "status": "passed"
             },
             "line": 5,
@@ -48,7 +48,7 @@
           },
           {
             "result": {
-              "duration": 1113391000,
+              "duration": 3558016000,
               "status": "passed"
             },
             "line": 6,
@@ -60,7 +60,7 @@
           },
           {
             "result": {
-              "duration": 3638000,
+              "duration": 4394000,
               "status": "passed"
             },
             "line": 7,
@@ -72,7 +72,7 @@
           },
           {
             "result": {
-              "duration": 1787257000,
+              "duration": 40773000,
               "status": "passed"
             },
             "line": 8,
@@ -90,7 +90,7 @@
           },
           {
             "result": {
-              "duration": 19696000,
+              "duration": 18103000,
               "status": "passed"
             },
             "line": 9,
@@ -114,6 +114,75 @@
     "id": "credit-card-inquiries-us-bank-phone-numbers",
     "keyword": "Feature",
     "uri": "file:src/main/java/StateFarmFeature/ContactUs.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-04-09T12:48:57.388Z",
+        "line": 3,
+        "name": "Clicking help button would take to the customer care page",
+        "description": "",
+        "id": "help-button-redirects-to-customer-care-page;clicking-help-button-would-take-to-the-customer-care-page",
+        "after": [
+          {
+            "result": {
+              "duration": 97795000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 13223409000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am on StateFarm homepage",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5075632000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click on the help button",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheHelpButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5803000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should be taken to the customer care page",
+            "match": {
+              "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheCustomerCarePage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Help button redirects to Customer Care Page",
+    "description": "",
+    "id": "help-button-redirects-to-customer-care-page",
+    "keyword": "Feature",
+    "uri": "file:src/main/java/StateFarmFeature/Help.feature",
     "tags": []
   }
 ]

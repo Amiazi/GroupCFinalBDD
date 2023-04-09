@@ -1,6 +1,7 @@
 package StateFarmStepDefinition;
 
 import StateFarmPageObjects.ContactUsPage;
+import StateFarmPageObjects.CustomerCarePage;
 import StateFarmPageObjects.StateFarmHomepage;
 import common.WebAPI;
 import io.cucumber.java.After;
@@ -11,8 +12,9 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class StepDefinitions extends WebAPI {
-    private StateFarmHomepage homepage;
+    private final StateFarmHomepage homepage;
     private ContactUsPage contactUsPage;
+    private CustomerCarePage customerCarePage;
     public StepDefinitions() {
         setUp();
         homepage = new StateFarmHomepage(getDriver());
@@ -53,5 +55,16 @@ public class StepDefinitions extends WebAPI {
     public void inTheCreditCardInquiriesUSBankSectionIShouldSeeTheConsumerTelAs(String expectedConsumerTel) {
         String displayedConsumerPhone = contactUsPage.getCreditCardInquiriesUSBankConsumerPhoneNumber();
         Assert.assertTrue(displayedConsumerPhone.equalsIgnoreCase(expectedConsumerTel));
+    }
+
+    @When("I click on the help button")
+    public void iClickOnTheHelpButton() {
+        customerCarePage = homepage.clickHelpButton();
+    }
+
+    @Then("I should be taken to the customer care page")
+    public void iShouldBeTakenToTheCustomerCarePage() {
+        String currentUrl = customerCarePage.getCurrentUrl();
+        Assert.assertTrue(currentUrl.equalsIgnoreCase("https://www.statefarm.com/customer-care"));
     }
 }

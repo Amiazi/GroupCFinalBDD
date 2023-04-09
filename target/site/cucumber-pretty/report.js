@@ -120,4 +120,48 @@ formatter.result({
 formatter.after({
   "status": "passed"
 });
+formatter.uri("file:src/main/java/StateFarmFeature/Help.feature");
+formatter.feature({
+  "name": "Help button redirects to Customer Care Page",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "name": "Clicking help button would take to the customer care page",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "I am on StateFarm homepage",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I click on the help button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iClickOnTheHelpButton()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "I should be taken to the customer care page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheCustomerCarePage()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });
