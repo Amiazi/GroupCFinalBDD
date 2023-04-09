@@ -3,7 +3,7 @@ package common;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.junit.Assert;
+import org.junit.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -15,8 +15,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -26,6 +25,8 @@ import java.util.concurrent.TimeUnit;
 public class WebAPI {
 
 
+    protected Properties properties;
+
     //Browser SetUp
     public static WebDriver driver = null;
     public String browserstack_username = "";
@@ -33,14 +34,69 @@ public class WebAPI {
     public String saucelabs_username = "";
     public String saucelabs_accesskey = "";
 
+    private boolean useCloudEnv;
+    private String cloudEnvName;
+    private String os;
+    private String os_version;
+    private String browserName;
+    private String browserVersion;
+    private String url;
+
+    public void ConfigFileReader() {
+        BufferedReader reader;
+        String propertyFilePath = "configs//configuration.properties";
+        try {
+            reader = new BufferedReader(new FileReader(propertyFilePath));
+            properties = new Properties();
+            try {
+                properties.load(reader);
+                reader.close();
+
+                useCloudEnv = Boolean.parseBoolean(properties.getProperty("useCloudEnv"));
+                cloudEnvName = properties.getProperty("cloudEnvName");
+                os = properties.getProperty("os");
+                os_version = properties.getProperty("os_version");
+                browserName = properties.getProperty("browserName");
+                browserVersion = properties.getProperty("browserVersion");
+                url = properties.getProperty("url");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            throw new RuntimeException("configuration.properties not found at " + propertyFilePath);
+        }
+    }
 
     public void cleanUp(){
         driver.quit();
     }
 
+    public void setUp() {
+        ConfigFileReader();
+
+        try {
+            if (useCloudEnv == true) {
+                if (cloudEnvName.equalsIgnoreCase("browserstack")) {
+                    getCloudDriver(cloudEnvName, browserstack_username, browserstack_accesskey, os, os_version, browserName, browserVersion);
+                } else if (cloudEnvName.equalsIgnoreCase("saucelabs")) {
+                    getCloudDriver(cloudEnvName, saucelabs_username, saucelabs_accesskey, os, os_version, browserName, browserVersion);
+                }
+            } else {
+                getLocalDriver(os, browserName);
+            }
+            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+            driver.get(url);
+            driver.manage().window().maximize();
+        } catch (Exception e) {
+
+        }
+    }
+
     public void setUp(boolean useCloudEnv,  String cloudEnvName,
                       String os, String os_version, String browserName,
-                              String browserVersion, String url) throws IOException {
+                      String browserVersion, String url) throws IOException {
 
         if (useCloudEnv == true) {
             if (cloudEnvName.equalsIgnoreCase("browserstack")) {
@@ -55,6 +111,10 @@ public class WebAPI {
         //driver.manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         driver.get(url);
         driver.manage().window().maximize();
+    }
+
+    public static WebDriver getDriver() {
+        return driver;
     }
 
     public WebDriver getLocalDriver(String OS, String browserName) {
@@ -110,6 +170,32 @@ public class WebAPI {
         return driver;
     }
 
+    public void waitFor(int seconds) {
+        try {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void scrollToViewWithDriver(WebElement element, WebDriver driver){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
+
+    public void switchToNextTab(WebDriver driver) {
+        // Get the current window handle
+        String currentHandle = driver.getWindowHandle();
+
+        // Get a list of all window handles
+        List<String> handlesList = new ArrayList<String>(driver.getWindowHandles());
+
+        // Get the index of the current window handle
+        int currentHandleIndex = handlesList.indexOf(currentHandle);
+
+        // Switch to the next tab
+        driver.switchTo().window(handlesList.get(currentHandleIndex + 1));
+    }
 
 
     //helper methods

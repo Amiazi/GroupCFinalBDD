@@ -3,92 +3,117 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2023-04-01T20:04:29.209Z",
-        "before": [
-          {
-            "result": {
-              "duration": 5734490600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.openBrowser()"
-            }
-          }
-        ],
-        "line": 3,
-        "name": "Searching a product in the search bar.",
+        "start_timestamp": "2023-04-09T12:16:22.371Z",
+        "line": 14,
+        "name": "user can see the consumer and business tel number",
         "description": "",
-        "id": "this-is-a-script-for-home-depot-automated-test-cases.;searching-a-product-in-the-search-bar.",
+        "id": "credit-card-inquiries-us-bank-phone-numbers;user-can-see-the-consumer-and-business-tel-number;;2",
         "after": [
           {
             "result": {
-              "duration": 440037100,
+              "duration": 97644000,
               "status": "passed"
             },
             "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.closeBrowser()"
+              "location": "StateFarmStepDefinition.StepDefinitions.tearDown()"
             }
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 50269900,
+              "duration": 26899962000,
               "status": "passed"
             },
             "line": 4,
-            "name": "I am on Home Depot homepage",
+            "name": "I am on StateFarm homepage",
             "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_am_on_Home_Depot_homepage()"
+              "location": "StateFarmStepDefinition.StepDefinitions.iAmOnStateFarmHomepage()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1305548800,
+              "duration": 55637000,
               "status": "passed"
             },
             "line": 5,
-            "name": "I type a product in the search bar",
+            "name": "I scroll to the bottom of the page",
             "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_type_a_product_in_the_search_bar()"
+              "location": "StateFarmStepDefinition.StepDefinitions.iScrollToTheBottomOfThePage()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3142800400,
+              "duration": 1113391000,
               "status": "passed"
             },
             "line": 6,
-            "name": "I click on the search icon",
+            "name": "clicks the contact us link",
             "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_click_on_the_search_icon()"
+              "location": "StateFarmStepDefinition.StepDefinitions.clicksTheContactUpLink()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 88112100,
+              "duration": 3638000,
               "status": "passed"
             },
             "line": 7,
-            "name": "I get the search results",
+            "name": "I should be taken to the contact us page",
             "match": {
-              "location": "HomeDepotStepDefinition.HomeDepotStepDefinition.i_get_the_search_results()"
+              "location": "StateFarmStepDefinition.StepDefinitions.iShouldBeTakenToTheContactUsPage()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1787257000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "In the Credit card inquiries - U.S. Bank section I should see the consumer tel as \"833-728-0344\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"833-728-0344\"",
+                  "offset": 82
+                }
+              ],
+              "location": "StateFarmStepDefinition.StepDefinitions.inTheCreditCardInquiriesUSBankSectionIShouldSeeTheConsumerTelAs(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 19696000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "The business tel number as \"833-728-0345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"833-728-0345\"",
+                  "offset": 27
+                }
+              ],
+              "location": "StateFarmStepDefinition.StepDefinitions.theBusinessTelNumberAs(java.lang.String)"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
-    "name": "This is a script for Home Depot automated test cases.",
+    "name": "Credit Card Inquiries US Bank Phone Numbers",
     "description": "",
-    "id": "this-is-a-script-for-home-depot-automated-test-cases.",
+    "id": "credit-card-inquiries-us-bank-phone-numbers",
     "keyword": "Feature",
-    "uri": "file:src/main/java/HomeDepotFeature/HomeDepot.feature",
+    "uri": "file:src/main/java/StateFarmFeature/ContactUs.feature",
     "tags": []
   }
 ]
